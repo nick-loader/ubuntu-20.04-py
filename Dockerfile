@@ -7,7 +7,7 @@ RUN apt-get update -y && \
 
 RUN "deb http://archive.ubuntu.com/ubuntu focal-updates main restricted universe multiverse" | sudo tee -a /etc/apt/sources.list
 
-RUN apt-get update -y
-
 RUN wget -q -O packages-microsoft-prod.deb https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb \
     && sudo dpkg -i packages-microsoft-prod.deb
+
+COPY ./files/systemctl3.py /usr/bin/systemctl
