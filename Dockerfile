@@ -1,5 +1,4 @@
-# FROM ubuntu:20.04
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
 RUN apt-get update -y && \
     apt-get install -y apt-utils gcc git python3 python3-dev python3-pip lsb-release libssl-dev sudo apt-transport-https wget unzip rake python sudo gnupg
